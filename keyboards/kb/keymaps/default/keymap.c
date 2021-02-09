@@ -13,7 +13,7 @@ enum custom_keycodes{
 	NAT_INT, BARR, IMMORT,
 	SPEC_WEP, MH_SHIELD, DW,
 	
-}
+};
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
