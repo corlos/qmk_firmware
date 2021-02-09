@@ -75,7 +75,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		KC_J, MH_SHIELD, CTRL_L, 
 		
 		SSDS, KC_C, DW, 
-		ZERK, SHIFT_G, SHIFT_U),
+		ZERK, SHIFT_G, SHIFT_U)
 
 };
 
