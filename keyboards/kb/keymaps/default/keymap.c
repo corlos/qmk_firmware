@@ -18,24 +18,6 @@ enum custom_keycodes{
 	
 };
 
-
-
-const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-
-	KEYMAP(
-		BARR, IMMORT, NAT_INT, 
-		KC_L, SHIFT_L, SPEC_WEP, 
-		
-		CTRL_Y, KC_Y, SHIFT_Y 
-		KC_J, MH_SHIELD, CTRL_L, 
-		
-		SSDS, KC_C, DW, 
-		ZERK, SHIFT_G, SHIFT_U),
-
-};
-
-
-
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 	switch (keycode) {
 		 case ZERK:G
@@ -82,5 +64,23 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 	}
 	return true;
 };
+
+const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
+
+	KEYMAP(
+		BARR, IMMORT, NAT_INT, 
+		KC_L, SHIFT_L, SPEC_WEP, 
+		
+		CTRL_Y, KC_Y, SHIFT_Y 
+		KC_J, MH_SHIELD, CTRL_L, 
+		
+		SSDS, KC_C, DW, 
+		ZERK, SHIFT_G, SHIFT_U),
+
+};
+
+
+
+
 
 }
