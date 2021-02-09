@@ -20,7 +20,7 @@ enum custom_keycodes{
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 	switch (keycode) {
-		 case ZERK:G
+		 case ZERK:
 			if (record->event.pressed){
 				SEND_STRING(SS_TAP(SS_LSFT("8")) SS_DELAY(50) SS_TAP("E")) 				
 				}
