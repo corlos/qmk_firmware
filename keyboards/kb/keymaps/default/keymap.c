@@ -1,12 +1,6 @@
 #include "kb.h"
 
-enum custom_keycodes{
 
-	ZERK = SAFE_RANGE, SSDS, 
-	NAT_INT, BARR, IMMORT,
-	SPEC_WEP, MH_SHIELD, DW,
-	
-};
 
 #define SHIFT_U LSHIFT(KC_U)
 #define SHIFT_G LSHIFT(KC_G)
@@ -16,7 +10,13 @@ enum custom_keycodes{
 #define SHIFT_L LSHIFT(KC_L) 
 
 
+enum custom_keycodes{
 
+	ZERK = SAFE_RANGE, SSDS, 
+	NAT_INT, BARR, IMMORT,
+	SPEC_WEP, MH_SHIELD, DW,
+	
+};
 
 
 
