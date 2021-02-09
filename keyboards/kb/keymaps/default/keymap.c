@@ -22,43 +22,43 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 	switch (keycode) {
 		 case ZERK:
 			if (record->event.pressed){
-				SEND_STRING(SS_TAP(SS_LSFT("8")) SS_DELAY(50) SS_TAP("E")) 				
+				SEND_STRING(SS_LSFT("8") SS_DELAY(50) "E") 				
 				}
 				break;
 		case SSDS:
 			if (record->event.pressed){
-				SEND_STRING(SS_TAP(SS_LSFT("8")) SS_DELAY(50) SS_TAP(SS_LALT("8"))
-				SS_DELAY(50) SS_TAP(SS_LCTL("8")) SS_DELAY(50) SS_TAP("8"))				
+				SEND_STRING(SS_LSFT("8") SS_DELAY(50) SS_LALT("8")
+				SS_DELAY(50) SS_LCTL("8") SS_DELAY(50) "8")				
 				}
 				break;				
 		 case NAT_INT:
 			if (record->event.pressed){
-				SEND_STRING(SS_TAP(SS_LSFT("8")) SS_DELAY(50) SS_TAP(SS_LSFT("P")))
+				SEND_STRING(SS_LSFT("8") SS_DELAY(50) SS_LSFT("P"))
 				}
 				break;				
 		case BARR:
 			if (record->event.pressed){
-				SEND_STRING(SS_TAP(SS_LSFT("8")) SS_DELAY(50) SS_TAP("P"))
+				SEND_STRING(SS_LSFT("8") SS_DELAY(50) "P")
 				}
 				break;		
 		case IMMORT:
 			if (record->event.pressed){
-				SEND_STRING(SS_TAP(SS_LSFT("8")) SS_DELAY(50) SS_TAP(SS_LCTL("P")))
+				SEND_STRING(SS_LSFT("8") SS_DELAY(50) SS_LCTL("P"))
 				}
 				break;					
 		 case SPEC_WEP:
 			if (record->event.pressed){
-				SEND_STRING(SS_TAP(SS_LSFT("C")) SS_DELAY(100) SS_TAP(SS_LCTL("C")))
+				SEND_STRING(SS_LSFT("C") SS_DELAY(100) SS_LCTL("C"))
 				}
 				break;				
 		 case MH_SHIELD:
 			if (record->event.pressed){
-				SEND_STRING(SS_TAP("M") SS_DELAY(50) SS_TAP("X"))
+				SEND_STRING("M" SS_DELAY(50) "X")
 				}
 				break;				
 		 case DW:
 			if (record->event.pressed){
-				SEND_STRING(SS_TAP("M") SS_DELAY(50) SS_TAP(SS_LSFT("M")))
+				SEND_STRING("M" SS_DELAY(50) SS_LSFT("M"))
 				}
 				break;				
 	}
