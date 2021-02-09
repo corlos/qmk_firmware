@@ -10,7 +10,7 @@
 
 enum custom_keycodes{
 
-	ZERK = SAFE_RANGE, SSDS, 
+	MACROS = SAFE_RANGE, ZERK, SSDS, 
 	NAT_INT, BARR, IMMORT,
 	SPEC_WEP, MH_SHIELD, DW,
 	
@@ -18,7 +18,7 @@ enum custom_keycodes{
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 	switch (keycode) {
-		 case ZERK:
+		 case MACROS:
 			if (record->event.pressed){
 				SEND_STRING(SS_TAP(SS_LSFT("8")) SS_DELAY(50) SS_TAP("E")) 				
 				}
