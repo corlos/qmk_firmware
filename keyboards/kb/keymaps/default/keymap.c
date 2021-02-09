@@ -1,5 +1,13 @@
 #include "kb.h"
 
+enum custom_keycodes{
+
+	ZERK = SAFE_RANGE, SSDS, 
+	NAT_INT, BARR, IMMORT,
+	SPEC_WEP, MH_SHIELD, DW,
+	
+};
+
 #define SHIFT_U LSHIFT(KC_U)
 #define SHIFT_G LSHIFT(KC_G)
 #define CTRL_Y LCTRL(KC_Y)
@@ -8,13 +16,25 @@
 #define SHIFT_L LSHIFT(KC_L) 
 
 
-enum custom_keycodes{
 
-	MACROS = SAFE_RANGE, ZERK, SSDS, 
-	NAT_INT, BARR, IMMORT,
-	SPEC_WEP, MH_SHIELD, DW,
-	
+
+
+
+const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
+
+	KEYMAP(
+		BARR, IMMORT, NAT_INT, 
+		KC_L, SHIFT_L, SPEC_WEP, 
+		
+		CTRL_Y, KC_Y, SHIFT_Y 
+		KC_J, MH_SHIELD, CTRL_L, 
+		
+		SSDS, KC_C, DW, 
+		ZERK, SHIFT_G, SHIFT_U),
+
 };
+
+
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 	switch (keycode) {
@@ -62,63 +82,5 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 	}
 	return true;
 };
-
-const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-
-	KEYMAP(
-		BARR, IMMORT, NAT_INT, 
-		KC_L, SHIFT_L, SPEC_WEP, 
-		
-		CTRL_Y, KC_Y, SHIFT_Y 
-		KC_J, MH_SHIELD, CTRL_L, 
-		
-		SSDS, KC_C, DW, 
-		ZERK, SHIFT_G, SHIFT_U),
-
-};
-
-
-
-
-
-void matrix_init_user(void) {
-}
-
-void matrix_scan_user(void) {
-}
-
-
-
-void led_set_user(uint8_t usb_led) {
-
-	if (usb_led & (1 << USB_LED_NUM_LOCK)) {
-		
-	} else {
-		
-	}
-
-	if (usb_led & (1 << USB_LED_CAPS_LOCK)) {
-		
-	} else {
-		
-	}
-
-	if (usb_led & (1 << USB_LED_SCROLL_LOCK)) {
-		
-	} else {
-		
-	}
-
-	if (usb_led & (1 << USB_LED_COMPOSE)) {
-		
-	} else {
-		
-	}
-
-	if (usb_led & (1 << USB_LED_KANA)) {
-		
-	} else {
-		
-	}
 
 }
