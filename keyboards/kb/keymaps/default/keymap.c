@@ -7,13 +7,6 @@
 #define CTRL_L LCTRL(KC_L)
 #define SHIFT_L LSHIFT(KC_L) 
 
-enum custom_keycodes{
-
-	ZERK = SAFE_RANGE, SSDS, 
-	NAT_INT, BARR, IMMORT,
-	SPEC_WEP, MH_SHIELD, DW,
-	
-};
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -39,6 +32,14 @@ void matrix_init_user(void) {
 
 void matrix_scan_user(void) {
 }
+
+enum custom_keycodes{
+
+	ZERK = SAFE_RANGE, SSDS, 
+	NAT_INT, BARR, IMMORT,
+	SPEC_WEP, MH_SHIELD, DW,
+	
+};
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 	switch (keycode) {
